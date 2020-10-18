@@ -2,19 +2,22 @@
 
 Check out this project at: https://sfnxboy.github.io/
 
-** Tools Used **
+**Tools Used**
 
 JavaScript, HTML, CSS
+
 
 ## Objective
 
 Data professionals not only need to analyze data and draw meaningful conclusions from it, but they also need to visualize the data in order to communicate their findings to an audience. With the power of JavaScript, any programmer can transform their data into significant, eye catching, and interactive data visualizations. PLotly.js is a JavaScript data visualization library used to create an interactive data visualization for the web. It’s a data scientists task to identify the best way to share her information with her audience, and engage them using dynamic charts.
+
 
 ## Plotly.js
 
 ![VSCode_Plot_1](https://user-images.githubusercontent.com/68082808/96375486-41401100-1147-11eb-9390-e1702dafbd4e.png)
 
 Built on top of D3.js and stack.gl, plotly.js is a high-level, declarative charting library. Plotly.js allows programmers to craft over 40 types of charts, including bubble charts, 3-D charts, and even SVG maps. This library is fully customizable because plotly.js charts are described declaratively as JSON objects. Every aspect of the charts, from colors, to grid lines, and the legend, has a corresponding  set of JSON attributes. 
+
 
 ## HTML components
  
@@ -30,6 +33,7 @@ Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 ```
+
 
 ## Results
 
