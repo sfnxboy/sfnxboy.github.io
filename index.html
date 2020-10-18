@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Bellybutton Biodiversity</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="custom.css" media="screen"/>
+
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;">
+
+
+  <div class="mySlides w3-display-container w3-center">
+    <img src="images/img3.jpg" style="width:100%">
+    <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h1 class="w3-text-white">Belly Button Biodiversity Dashboard</h1>
+      <h2 class="w3-text-white"><b>Use the interactive charts below to explore the dataset</b></p>   
+    </div>
+  </div>
+
+  <div class="w3-container w3-content w3-center" style="max-width:800px" id="band">
+    <h2 class="w3-wide w3-text-teal">What Lives in Your Belly Button? Study Finds "Rain Forest" of Species</h2>
+    <p class="w3-opacity"><i>We love Science</i></p>
+    <p class="w3-justify">Data findings are not so easy to find as they could be. It is not enough to be able to extract, transform and load data. Every project must be easily communicated with the scientific community through data visualizations. With the power of JavaScript, and HTML, scientific research becomes easily accessible without the need to scroll through long articles. The interactivity that JavaScript provides allows users to readily parse dense data to their liking. </p>
+	<p class="w3-justify">Many bacterial species are not well studied, and many more remain unknown to science. In this study we look into the "Rain Forest" of species one can find in their own Belly-Buttons! It is a challenge to predict what species like to call the human body home, and why that is. This study collected samples from a number of participants, and identified an even greater number of bacteria in each navel. Participants can use the interactive charts below to discover more about their Belly-Buttons.</p>
+<div class="w3-white" id="tour">
+    <div class="w3-container w3-content" style="max-width:1000px">
+      <h2 class="w3-wide w3-center w3-text-teal">Interactive Charts</h2>
+      <p class="w3-opacity w3-center"><i>Select an ID Number</i></p><br>
+    </div>
+    <div class="row">
+        <div class="well">
+            <h5>Test Subject ID No.:</h5>
+            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="w3-panel w3-teal w3-card-4">
+            <div class="panel-heading">
+              <font color="black"> 
+              <h3 class="panel-title w3-text-white">Demographic Info</h3>
+            </div>
+            <div id="sample-metadata" class="w3-text-white"></div>
+        </div>
+    </div>
+    <div class='row'>
+      <div class="col-md-9">
+        <div id="bar"></div>
+      </div>
+      <div class='col-md-3'>
+          <div class="w3-panel w3-teal w3-round-xlarge"  color="white">
+            <h4>OTU stands for "operational taxonomic units". The row label identifies the bacteria species, the hovertext defines the number of colonies of said species are in the sample.</h4>
+            <h4>Note: Not all colonies have been identified</h4> 
+            <h4>Bar charts are simple to read and explain themselves!</h4> 
+          </div>
+      </div>
+    </div>
+    <div class='row'>
+      <div class="col-md-3">
+        <div class="w3-panel w3-teal w3-round-xlarge"  color="white">
+          <h4>How often did this person wash their belly button per week? This gauge chart can quickly define the answer!</h4> 
+          <h4>Gauge charts are visually appealing and grab the reader's attention easily. They can be understood at a glance, and are very simple. Colors can be utilized to suggest "safer" regions. A bar and ticks allow a user to judge a value relative to others in the set.</h4>
+         </div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+
+    <div class="row">
+        <div id="bubble"></div>
+    </div>
+    <div class="row">
+        <div class="col-center-3">
+            <div class="w3-panel w3-teal w3-round-xlarge"  color="white">
+                <h4>A bubble chart is a neat variation of a scatter chart, in which the data points are replaced with bubbles. Simply, an extra dimension is added, where data is represented in the size of the bubbles. Both axis are value axis, unlike a scatter chart where axis may represent some category. It is encouraged to use a bubble chart instead of a scatter chart if your data set contains three data series, each of which contains a set of values. Different bubble sizes are useful to visually emphasize specific values.</h4>
+             </div>
+          </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-teal w3-xlarge">
+  <p class="w3-medium w3-text-white">Interested in More Projects?</p>
+  <i class="fa fa-facebook-official w3-hover-opacity" onclick="window.location.href='https://www.facebook.com/amir.eltabakh.121';"></i>
+  <i class="fa fa-github w3-hover-opacity" onclick="window.location.href='https://github.com/sfnxboy/';">  </i>
+  <i class="fa fa-linkedin w3-hover-opacity" onclick="window.location.href='https://www.linkedin.com/in/amir-eltabakh/';"></i>
+  <p class="w3-medium w3-text-white">Find me Here!</p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="charts.js"></script>
+
+</body>
+</html>
