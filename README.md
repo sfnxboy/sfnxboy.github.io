@@ -18,6 +18,32 @@ Data professionals not only need to analyze data and draw meaningful conclusions
 
 Built on top of D3.js and stack.gl, plotly.js is a high-level, declarative charting library. Plotly.js allows programmers to craft over 40 types of charts, including bubble charts, 3-D charts, and even SVG maps. This library is fully customizable because plotly.js charts are described declaratively as JSON objects. Every aspect of the charts, from colors, to grid lines, and the legend, has a corresponding  set of JSON attributes. 
 
+```
+function init() {
+  // Grab a reference to the dropdown select element
+  var selector = d3.select("#selDataset");
+
+  // Use the list of sample names to populate the select options
+  d3.json("samples.json").then((data) => {
+    var sampleNames = data.names;
+
+    sampleNames.forEach((sample) => {
+      selector
+        .append("option")
+        .text(sample)
+        .property("value", sample);
+    });
+
+    // Use the first sample from the list to build the initial plots
+    var firstSample = sampleNames[0];
+    buildCharts(firstSample);
+    buildMetadata(firstSample);
+  });
+}
+```
+
+The code above is used to create the dropdown on the website that allows a user to select the ID number that interests them. "#selDataset" is the a JS event listener, and grabs the reference of the selected element. The buildCharts and buildMetadata functions are what bring the website to life by creating the charts and plots found on the site. For more details regarding these functions, check out the charts.js file.
+
 
 ## HTML components
  
