@@ -9,7 +9,7 @@ JavaScript, HTML, CSS
 
 ## Objective
 
-Data professionals not only need to analyze data and draw meaningful conclusions from it, but they also need to visualize the data in order to communicate their findings to an audience. With the power of JavaScript, any programmer can transform their data into significant, eye catching, and interactive data visualizations. PLotly.js is a JavaScript data visualization library used to create an interactive data visualization for the web. It’s a data scientists task to identify the best way to share her information with her audience, and engage them using dynamic charts.
+Data professionals not only need to analyze data and draw meaningful conclusions from it, but they also need to visualize the data in order to communicate their findings to an audience. With the power of JavaScript, any programmer can transform their data into significant, eye catching, and interactive data visualizations. Plotly.js is a JavaScript data visualization library used to create an interactive data visualization for the web. It’s a data scientists task to identify the best way to share her information with her audience, and engage them using dynamic charts.
 
 
 ## Plotly.js
